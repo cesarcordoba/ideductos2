@@ -84,6 +84,7 @@ app.controller('homeCtrl', function($scope, $rootScope, $http, $mdDialog, mdDial
                 .then(res => self.servicios.items = res.data.map(n => new Servicios_(n)))
                 .then(res => console.log(res))
                 .then(() => $scope.$digest())
+                .catch(err => console.log(err))
             }
 
             muestra(algo){
