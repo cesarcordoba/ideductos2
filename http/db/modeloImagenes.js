@@ -7,14 +7,18 @@ var ex = function(conector) {
 
     var Imagen = sequelize.define('imagenes', {
         id:{ type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true},
-        imagen: {
+        
+
+        imagen: Sequelize.TEXT
+        /*
+        {
             type: Sequelize.BLOB('medium'),
             get() {
                 var imagenBin = this.getDataValue('imagen');
                 var Imagenes = new Buffer(imagenBin).toString('ascii');
                 return Imagenes
             },
-        },
+        },*/
 
     })
 
