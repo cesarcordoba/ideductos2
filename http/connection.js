@@ -17,11 +17,12 @@ var sequelize = new Sequelize('heroku_8336c91bfbfd82e', 'bebb7ad19454a6', '28d75
 var sequelize = new Sequelize('ideductos', 'ideductos', '#1q2w3e4r', {
     host: '35.226.84.114',
     dialect: 'mysql',
+    operatorsAliases: false,
     port: '3306',
     pool: {
-        min: 10,
-        max: 300,
-        idle: 30000,
+        max: 5,
+        min: 0,
+        idle: 10000
     }
 });
 
