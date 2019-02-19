@@ -14,8 +14,8 @@ var sequelize = new Sequelize('heroku_8336c91bfbfd82e', 'bebb7ad19454a6', '28d75
 });
 */
 
-var sequelize = new Sequelize('ideductos', 'ideductos', '#1q2w3e4r', {
-    host: '35.226.84.114',
+var sequelize = new Sequelize('ideductos', 'cesar', '1234', {
+    host: '35.238.229.92',
     dialect: 'mysql',
     operatorsAliases: false,
     port: '3306',
@@ -45,9 +45,9 @@ var sequelize = new Sequelize('ideductos', 'ideductos', '#1q2w3e4r', {
 // });
 
 // 
-// sequelize.sync()
-// .then(() =>  console.log('Connecion realizada'))
-// .catch(err =>  console.log('No se puede conectar a la bd:', err))
+sequelize.sync()
+.then(() =>  console.log('Connecion realizada'))
+.catch(err =>  console.log('No se puede conectar a la bd:', err))
 
 
 module.exports.Sequelize = Sequelize;
